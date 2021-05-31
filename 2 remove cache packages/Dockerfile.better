@@ -1,0 +1,12 @@
+FROM alpine
+
+RUN apk add --no-cache nginx
+
+COPY index.html /var/www/html/
+
+EXPOSE 80
+
+CMD [“nginx”,“-g”,“daemon off;”]
+
+# The best recommendation is to remove these cached/package files after the package is installed, this further optimizes the docker image
+# save more 2 mb size of image

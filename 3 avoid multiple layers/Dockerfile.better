@@ -1,0 +1,13 @@
+FROM alpine
+
+RUN apk update && apk add curl nginx nginx-mod-http-geoip2-1.16.1-r6 \
+rm -rf /var/cache/apt/*
+
+COPY index.html /var/www/html/
+
+EXPOSE 80
+
+CMD [“nginx”,“-g”,“daemon off;”]
+
+# Above Dockerfile can be optimized with the help of chaining and effectively 
+# using && and ** where ever needed to reduce the number of layers created for the Dockerfile.
