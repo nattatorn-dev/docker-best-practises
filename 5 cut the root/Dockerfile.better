@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:16
 
 RUN user add -m nodeapp
 
@@ -14,8 +14,8 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8888
+EXPOSE 3000
 
-CMD [ “node”, “index.js” ]
+CMD [ "node", "src/index.js" ]
 
 # Now, since we are aware of the fact that having the default user means root in order to avoid this we can specify the default user besides root

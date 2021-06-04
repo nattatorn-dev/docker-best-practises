@@ -14,7 +14,7 @@ COPY index.html /var/www/html/
 
 EXPOSE 80
 
-CMD [“nginx”,“-g”,“daemon off;”]
+CMD ["nginx","-g","daemon off;"]
 
 # Below is a Dockerfile that contains instruction where we install Nginx along with other utilities that are needed. 
 # In the case of Dockerfile, each new line of instruction forms a separate layer.

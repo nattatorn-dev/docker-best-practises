@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:16-slim
 
 WORKDIR /nodeapp
 
@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8888
+EXPOSE 3000
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "src/index.js" ]

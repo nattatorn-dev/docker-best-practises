@@ -1,0 +1,1 @@
+Tags are a unique way for the image to be identified. While tagging the image we can use any specific naming convention of our choice but its would-be really is optimal to choose the image tag based upon features, commit, or something which is more meaningful. Tags are for the end-user to choose which version of the image to use

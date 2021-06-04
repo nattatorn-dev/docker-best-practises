@@ -7,7 +7,7 @@ COPY index.html /var/www/html/
 
 EXPOSE 80
 
-CMD [“nginx”,“-g”,“daemon off;”]
+CMD ["nginx","-g","daemon off;"]
 
 # Above Dockerfile can be optimized with the help of chaining and effectively 
 # using && and ** where ever needed to reduce the number of layers created for the Dockerfile.
