@@ -1,0 +1,3 @@
+FROM node:16-slim
+
+EXPOSE 300000
