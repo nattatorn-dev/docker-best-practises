@@ -1,8 +1,8 @@
 FROM node:16-slim AS build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
-COPY ./src ./src
 RUN npm ci --production && npm cache clean --force
+COPY ./src ./src
 
 FROM build as prod
 COPY --from=build /usr/src/app /usr/src/app
